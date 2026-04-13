@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniHire - Student Job Portal</title>
+  <!-- SEO tags -->
+  <meta name="description" content="A premium job portal for college students to find internships and full-time roles.">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="brand" style="display: flex; align-items: center; gap: 0.5rem;">
+      <img src="img/unihire_logo.png" alt="UniHire Logo" style="height: 32px; width: 32px; object-fit: contain;">
+      UniHire
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Jobs</a>
+      <a href="profile.html">Profile</a>
+      <a href="profile.html" class="user-profile">
+        <img src="img/student.png" alt="Student Profile avatar" class="user-avatar" id="nav-avatar">
+        <span class="user-name">Alex Johnson</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="job-portal">
+    <!-- Sidebar Filters -->
+    <aside class="filters">
+      <h3>
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+        Filters
+      </h3>
+      
+      <input type="text" id="search-input" class="search-box" placeholder="Search by role or company...">
+
+      <div class="filter-group">
+        <h4>Job Type</h4>
+        <label class="checkbox-wrap">
+          <input type="checkbox" value="internship" class="filter-type">
+          <span>Internship</span>
+        </label>
+        <label class="checkbox-wrap">
+          <input type="checkbox" value="full-time" class="filter-type">
+          <span>Full-Time Role</span>
+        </label>
+        <label class="checkbox-wrap">
+          <input type="checkbox" value="part-time" class="filter-type">
+          <span>Part-Time</span>
+        </label>
+      </div>
+
+      <div class="filter-group">
+        <h4>Work Setup</h4>
+        <label class="checkbox-wrap">
+          <input type="checkbox" value="remote" class="filter-setup">
+          <span>Remote</span>
+        </label>
+        <label class="checkbox-wrap">
+          <input type="checkbox" value="hybrid" class="filter-setup">
+          <span>Hybrid</span>
+        </label>
+        <label class="checkbox-wrap">
+          <input type="checkbox" value="onsite" class="filter-setup">
+          <span>On-site</span>
+        </label>
+      </div>
+
+      <div class="filter-group">
+        <h4>Duration (Internships)</h4>
+        <label class="checkbox-wrap">
+          <input type="checkbox" value="3mo" class="filter-duration">
+          <span>3 Months (Summer)</span>
+        </label>
+        <label class="checkbox-wrap">
+          <input type="checkbox" value="6mo" class="filter-duration">
+          <span>6 Months (Co-op)</span>
+        </label>
+      </div>
+    </aside>
+
+    <!-- Listings Section -->
+    <section class="job-listings">
+      <div class="job-listings-header">
+        <h2>Recommended For You</h2>
+        <span class="job-count" id="job-count">Loading Jobs...</span>
+      </div>
+
+      <div class="job-grid" id="job-container">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
